@@ -107,7 +107,7 @@
 &bl BL_INC     &bl BL_CYCLE   &none           &none  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME   &kp END
 &bl BL_DEC     &none          &none           &none  &none           &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &none
 &bl BL_SET 20  &bl BL_SET 60  &bl BL_SET 100  &none  &bt BT_CLR      &none              &none          &none        &none      &none
-                              &sys_reset             &studio_unlock  &bootloader        &to 1          &to 0
+                              &sys_reset             &none  &bootloader        &to 1          &to 0
             >;
         };
 
