@@ -9,7 +9,9 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define SYM 1
@@ -79,12 +81,12 @@
 
         default_layer {
             bindings = <
-&mkp LCLK       &mkp RCLK
-&mt TAB GLOBE   &kp LGUI   &mkp LCLK  &mt ESC K_BACK  &mkp RCLK
-&kp Q           &kp W      &kp E      &kp R           &kp T      &kp Y        &kp U    &kp I      &kp O          &kp P
-&kp A           &kp S      &kp D      &kp F           &kp G      &kp H        &kp J    &kp K      &kp L          &kp BSPC
-&kp LEFT_SHIFT  &kp Z      &kp X      &kp C           &kp V      &kp B        &kp N    &kp M      &mt COMMA DOT  &kp ENTER
-                           &kp LCTRL                  &kp LALT   &kp SPACE    &to SYM  &to UPPER
+&mkp LCLK         &mkp RCLK
+&mt TAB CAPSLOCK  &kp LGUI   &mkp LCLK  &mt ESC K_BACK  &mkp RCLK
+&kp Q             &kp W      &kp E      &kp R           &kp T      &kp Y        &kp U    &kp I      &kp O          &kp P
+&kp A             &kp S      &kp D      &kp F           &kp G      &kp H        &kp J    &kp K      &kp L          &kp BSPC
+&kt LEFT_SHIFT    &kp Z      &kp X      &kp C           &kp V      &kp B        &kp N    &kp M      &mt COMMA DOT  &kp ENTER
+                             &kp LCTRL                  &kp LALT   &kp SPACE    &to SYM  &to UPPER
             >;
         };
 
