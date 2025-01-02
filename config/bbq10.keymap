@@ -5,13 +5,13 @@
  */
 
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define SYM 1
@@ -23,6 +23,7 @@
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <1>;
 };
+
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
@@ -103,11 +104,11 @@
         upper_layer {
             bindings = <
 &mkp LCLK      &mkp RCLK
-&bl abl-CYCLE  &none          &mkp LCLK       &none  &none
-&bl BL_INC     &none          &none           &none  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME   &kp END
-&bl BL_DEC     &none          &none           &none  &none           &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &none
-&bl BL_SET 20  &bl BL_SET 60  &bl BL_SET 100  &none  &bt BT_CLR      &none              &none          &none        &none      &none
-                              &sys_reset             &none  &bootloader        &to 1          &to 0
+&bl BL_CYCLE   &none          &mkp LCLK       &none       &bootloader
+&bl BL_INC     &BetterBT0     &BetterBT1      &BetterBT2  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp PAGE_DOWN  &kp PAGE_UP  &kp HOME   &kp END
+&bl BL_DEC     &BetterBT3     &BetterBT4      &BetterUSB  &none           &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &none
+&bl BL_SET 20  &bl BL_SET 60  &bl BL_SET 100  &none       &bt BT_CLR      &none              &none          &none        &none      &none
+                              &sys_reset                  &none           &none              &to 1          &to 0
             >;
         };
 
